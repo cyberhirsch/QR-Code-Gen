@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generator</title>
+<style>
+    body {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        padding: 10px;
+        background-color: #A9A9A9;
+        color: #333;
+    }
+
+    #text, button, #qrcode, #qrcodeLarge {
+        width: 100%;
+        padding: 8px 15px;
+        margin: 5px 0; /* Uniform margin for all elements */
+        box-sizing: border-box;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        background-color: #fff;
+    }
+
+    button {
+        background-color: #fff;
+        color: #333;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 0.9em;
+    }
+
+    button:hover {
+        background-color: #ddd;
+    }
+
+    #qrcode, #qrcodeLarge {
+        padding: 0; /* Remove padding for QR code areas */
+        border: none; /* Remove border for QR code areas */
+    }
+</style>
+
+</head>
+<body>
+    <input type="text" id="text" placeholder="Enter text or URL">
+    <button id="generate">Generate QR Codes</button>
+    <div id="qrcode"></div>
+    <div id="qrcodeLarge"></div>
+    <button id="download">Download Large QR Code</button>
+
+    <script src="qrcode.min.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
